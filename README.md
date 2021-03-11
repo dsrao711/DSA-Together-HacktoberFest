@@ -1,2 +1,2 @@
-# python-data-structures
-## Set of basic ,easy ,difficult problems from Geeks for Geeks
+# Python data Structures
+## Set of basic ,easy ,difficult problems from Geeks for Geeks and LeetCode
