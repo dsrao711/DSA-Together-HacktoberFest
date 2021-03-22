@@ -18,7 +18,7 @@ def merge_sorted_list(a, b, arr):
     len_b = len(b)
     i = j = k = 0
     while (i < len_a and j < len_b):
-
+        
         if(a[i] <= b[j]):
             arr[k] = a[i]
             i += 1
@@ -32,7 +32,7 @@ def merge_sorted_list(a, b, arr):
         i += 1
         k += 1
     while j < len_b:
-        arr[k] = b[j]
+        arr[j] = b[j]
         j += 1
         k += 1
 
