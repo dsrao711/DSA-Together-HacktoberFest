@@ -52,10 +52,8 @@ class LinkedList:
                     temp = temp.next
 
             if(temp != None and temp.next != None):
-                nodeToDelete = temp.next
                 temp.next = temp.next.next
-                nodeToDelete = None
-
+                
             else:
                 print("The node is already null")
 
