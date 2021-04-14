@@ -4,7 +4,7 @@ class Node :
         self.prev = None
         self.next = None
     
-class LinkedList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
 
@@ -44,8 +44,43 @@ class LinkedList:
         lastNode.next = newNode
         newNode.prev = lastNode
 
+    def InsertBefore(self , head_ref , nextNode , value) :
+        newNode = Node(value)
+        if(nextNode == None):
+            print("Next Node is Null")
+        
+        newNode.prev = nextNode.prev
+        nextNode.prev = newNode
+        newNode.next = nextNode
+
+        if(newNode.prev !=  None):
+            newNode.prev.next = newNode
+        else:
+            head_ref = newNode
+        return head_ref
+
+
+    def PrintList(self , node) :
+        while node :
+            print(node.data)
+            node = node.next
     
 
-if __name__ == '__main__':
-    head = None
-    head = 
+
+
+Mylist = DoublyLinkedList()
+Mylist.InsertAtEnd(10)
+Mylist.InsertAtEnd(20)
+Mylist.InsertAtEnd(30)
+Mylist.InsertAtEnd(40)
+Mylist.InsertAtEnd(50)
+
+Mylist.InsertAtBeg(22)
+Mylist.InsertAtPos(3 , Mylist.head.next)
+
+
+Mylist.PrintList(Mylist.head)
+
+Mylist.InsertBefore(Mylist.head , Mylist.head.next , 12)
+
+Mylist.PrintList(Mylist.head)
