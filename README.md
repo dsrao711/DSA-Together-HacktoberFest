@@ -1,2 +1,9 @@
-# Python data Structures
-## Set of basic ,easy ,difficult problems from Geeks for Geeks and LeetCode
+# Data Structures and Algorithms
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+
+- Arrays
+- Linked List 
+- Matrix
+- Strings
+- LeetCode Problems
+- Algorithms
