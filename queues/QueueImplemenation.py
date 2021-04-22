@@ -12,7 +12,7 @@ class Queue :
         
     #Removes item from the Queue 
     def dequeue(self):
-        if(self.size < 1):
+        if(len(self.queue) < 1):
             return None
         else:
             return self.queue.pop()
