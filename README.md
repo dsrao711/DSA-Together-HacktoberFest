@@ -5,5 +5,7 @@
 - Linked List 
 - Matrix
 - Strings
+- Stacks
+- Queues
 - LeetCode Problems
 - Algorithms
