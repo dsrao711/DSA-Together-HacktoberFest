@@ -1,4 +1,6 @@
-#
+#https://practice.geeksforgeeks.org/problems/print-anagrams-together/1
+
+#Print Anagrams Together
 
 
 from collections import defaultdict
@@ -18,11 +20,9 @@ def Anagrams(words,n):
   
     return anagrams.values()
     
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
-#contributed by RavinderSinghPB
+#  Driver Code 
+
 if __name__ =='__main__':
     t= int(input())
     for tcs in range(t):
@@ -36,4 +36,6 @@ if __name__ =='__main__':
                 print(word,end=' ')
             print()
 
-# } Driver Code Ends
+
+
+# Used default dict from collections module . It does not raise key value error
