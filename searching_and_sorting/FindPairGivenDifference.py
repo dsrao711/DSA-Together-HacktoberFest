@@ -1,9 +1,13 @@
 
+#https://practice.geeksforgeeks.org/problems/find-pair-given-difference1559/1#
+
+# Using Two Pointer techq
+# Sort the array before applying two pointer approach
 class Solution:
 
     def findPair(self, arr, L,N):
+        
         arr.sort()
-        #code here
         i,j = 0,1
         flag = 0
         size = len(arr)
