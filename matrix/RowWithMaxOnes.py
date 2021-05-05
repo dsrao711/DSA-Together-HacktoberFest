@@ -1,6 +1,11 @@
 #https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1#
 
-#Row with max 1s
+#Steps : 
+
+# 1 . Initialize the count of ones in a row as max_ones_row = -1
+# 2 . Initialize the max count of 1's as max_ones = 0
+# 3 . Iterate through each row and find the ones count
+# 4 . Compare the max_ones with max_ones_row in each row and store the updated count in max_ones_row
 
 class Solution:
     
