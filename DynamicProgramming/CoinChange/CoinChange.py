@@ -7,7 +7,7 @@ class Solution(object):
         """
         rs = [amount+1] * (amount+1)
         rs[0] = 0
-        for i in xrange(1, amount+1):
+        for i in range(1, amount+1):
             for c in coins:
                 if i >= c:
                     rs[i] = min(rs[i], rs[i-c] + 1)
