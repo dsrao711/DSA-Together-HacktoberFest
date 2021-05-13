@@ -4,6 +4,9 @@
 
 ## Steps :
 
+[![1.jpg](https://i.postimg.cc/44HknsFf/1.jpg)](https://postimg.cc/G9RS5wCV)
+
+
 <u>Partition:</u>
 
 1. Increment i until an element greater than pivot is found
