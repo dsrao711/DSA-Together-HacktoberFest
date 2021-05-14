@@ -23,3 +23,12 @@ MergeSort(l,h):
         Merge(l,mid,h)          # n
 
 ```
+[![msort.png](https://i.postimg.cc/MKtx44Lb/msort.png)](https://postimg.cc/N5yW2NB5)
+
+
+Time Complexity : 
+
+- T(n/2) + T(n/2) + n for n >1
+- 1 for n = 1
+
+[![14.png](https://i.postimg.cc/bNSCMLWW/14.png)](https://postimg.cc/tYyNndXN)
