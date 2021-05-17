@@ -2,16 +2,16 @@ def mergesort(arr):
 
     if len(arr) <= 1:
         return
-
+    n = len(arr)
     mid = len(arr) // 2
-    left = arr[: mid]
-    right = arr[mid:]
+    l = arr[0]
+    h = arr[n-1]
+    
+    mergesort(l , mid)
+    mergesort(mid+1 , h)
 
-    mergesort(left)
-    mergesort(right)
-
-    merge_sorted_list(left, right, arr)
-
+    op = merge_sorted_list(l , h , arr)
+    return op
 
 def merge_sorted_list(a, b, arr):
     len_a = len(a)
@@ -35,17 +35,12 @@ def merge_sorted_list(a, b, arr):
         arr[j] = b[j]
         j += 1
         k += 1
+        
+    return arr
 
 
 if __name__ == '__main__':
 
-    test_cases = [
-        [0, 1, 5, 3, 2, 7],
-        [1, 3, 4, 2, 55, 2, 99, 33],
-        [1, 2],
-        []
-    ]
-
-    for arr in test_cases:
-        mergesort(arr)
-        print(arr)
+    op = mergesort([34,11,4,5,6,67,67,8,])
+    print(op)
+    
