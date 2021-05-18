@@ -1,29 +1,29 @@
-def threeSum(nums):
-       
-    
-    left = 0
-    right = len(nums) - 1
-    flag = 0
-    nums.sort()
-    solution = []
-    for k in range (0 , len(nums) - 1):
-        x = nums[k]
-        while(left < right):
-            if(nums[left] + nums[right]+x == 0):
-                print("bfhbf")
-                solution.append([nums[left] , nums[right] , x])
-                left += 1
-                right -= 1
-                flag  = 1
-                
-            if(nums[left] + nums[right] < x ):
-                left += 1
-            else:
-                right -= 1
-    if (flag == 1):
-        print(solution)
-    else: 
-        print([])
-              
 
-threeSum([-1,0,1,2,-1,-4])
+def threeSum(nums):
+
+  res = set()
+  nums.sort()
+  for i in range(len(nums)-2):
+    if i!=0 and nums[i]==nums[i-1]:
+      continue
+    if nums[i] > 0:
+      break
+    target = -(nums[i])
+    low = i + 1
+    high = len(nums)-1
+    while low < high:
+      sum = nums[low] + nums[high]
+      if sum == target:
+        res.add((nums[i],nums[low],nums[high]))
+        low += 1
+      elif sum < target:
+        low += 1
+      else:
+        high -= 1
+        
+  print(list(res)[::-1]) 
+
+            
+
+arr = [-1,0,1,2,-1,-4]
+threeSum(arr)
