@@ -1,3 +1,6 @@
+# Link to the problem : https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers1732/1
+
+
 # A hashing based Python program to find if there are
 # four elements with given summ.
 
@@ -7,6 +10,7 @@ def findFourElements(arr, n, X):
 
 	# Store summs of all pairs in a hash table
 	mp = {}
+	op = []
 	for i in range(n - 1):
 		for j in range(i + 1, n):
 			mp[arr[i] + arr[j]] = [i, j]
@@ -25,15 +29,14 @@ def findFourElements(arr, n, X):
 				# is not considered more than once.
 				p = mp[X - summ]
 				if (p[0] != i and p[0] != j and p[1] != i and p[1] != j):
-					print(arr[i], ", ", arr[j], ", ",
-						arr[p[0]], ", ", arr[p[1]], sep="")
-					return
+					op = [arr[p[0]] , arr[p[1]] , arr[i] , arr[j]]
+	print(op)
 
 
 # Driver code
-arr = [10, 20, 30, 40, 1, 2]
+arr = [0,0,2,1,1]
 n = len(arr)
-X = 91
+X = 3
 
 # Function call
 findFourElements(arr, n, X)
