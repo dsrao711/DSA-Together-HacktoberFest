@@ -9,3 +9,4 @@ Using Two Pointer method :
 - Since we need unique charachters in every subarray , we need to check if there are duplicates 
 
 #### Condition for duplicates : 
+- The next/previous element should not be equal for current element 
