@@ -16,6 +16,8 @@ class Solution:
         if(root is None):
             return 0
         else:
+            # Find Left Depth , Right depth 
+            
             leftDepth = self.height(root.left)
             rightDepth = self.height(root.right)
             

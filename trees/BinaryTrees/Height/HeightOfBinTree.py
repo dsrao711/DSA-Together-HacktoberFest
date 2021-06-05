@@ -48,9 +48,4 @@ class Node:
        // this is a node of the tree , which contains info as data, left , right
 '''
 def height(root):
-  add = 0
-  if(root.left):
-    add = 1 + height(root.left)
-  if(root.right):
-    add = 1 + height(root.right)
-  return add
+  return -1 if root is None else max(height(root.left) + 1, height(root.right) + 1)
