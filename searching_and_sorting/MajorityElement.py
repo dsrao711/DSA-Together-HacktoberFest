@@ -1,29 +1,39 @@
-   
-# https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1
-   
-class Solution :
-   
-    def majorityElement(self, A, N):
+    
+class Solution():
+
+    def majorityElement(self, arr, n):
         #Your code here
-        occ = {}
+        arr.sort()
+        count = 1
+        max_ele = -1
+        temp = arr[0]
         flag = 0
-        for i in A :
-            if i in occ :
-                occ[i] += 1
+        
+        for i in range(1,n):
+            
+            if(temp == arr[i]):
+                count += 1
             else:
-                occ[i] = 1
-        count = 0
-        for key in occ :
-            if(occ[key] > N/2):
-                flag = 1
-                count = key
-                break
+                count = 1
+                temp = arr[i]
             
-        if (flag == 0):
-            count = -1
+            if(max_ele < count):
+                
+                max_ele = count
+                ele = arr[i]
+                
+                if(max_ele > (n//2)):
+                    flag = 1
+                    break
             
-        return count
             
+        if(flag == 1):
+            return ele
+        elif(len(arr) == 1):
+            return arr[0]
+        else:
+            return -1
+        
 
 #{ 
 #  Driver Code Starts
@@ -35,6 +45,7 @@ from sys import stdin
 
 
 def main():
+    
         T=int(input())
         while(T>0):
             
