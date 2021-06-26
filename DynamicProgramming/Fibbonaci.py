@@ -1,4 +1,4 @@
-# 1 . Tabulation - Bottom Up approach
+# 1 . Tabulation - Bottom Up approach (Iterative)
 
 def fib_bottom_up(n):
     

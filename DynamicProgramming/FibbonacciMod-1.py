@@ -1,4 +1,5 @@
-# Approach 2
+# Approach 2 - Memoization
+
 #!/bin/python3
 
 import math
@@ -15,7 +16,7 @@ import sys
 #  1. INTEGER t1
 #  2. INTEGER t2
 #  3. INTEGER n
-#
+
 from functools import lru_cache
 
 @lru_cache(maxsize = 1000)
