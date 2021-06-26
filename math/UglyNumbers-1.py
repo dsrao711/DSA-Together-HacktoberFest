@@ -23,3 +23,4 @@ class Solution:
     
       
             
+# Refer ugly number 2 in DP
