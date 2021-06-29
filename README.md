@@ -11,4 +11,5 @@
 - Stacks
 - Queues
 - Trees
+- Graphs
 - Algorithms
