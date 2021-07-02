@@ -1,30 +1,21 @@
 
 #https://practice.geeksforgeeks.org/problems/ncr1019/1#
 
+#Tabulation method
 class Solution:
     def nCr(self, n, r):
         # code here
-        #Pascals triangle
-        if(r>n):
-            return 0
-            
-        if(n == r):
-            return 1
-            
-        if(n-r < r):
-            r = n-r
-            
-        mod = 10000000007  
-        dp = [0]*(r+1)
-        dp[0] = 1
+        dp = [[0 for x in range(r+1)] for x in range(n+1)]
+        mod = 10**9 + 7
+        for i in range(n+1):
+            for j in range(min(i , r)+1):
+                if(j == i or j == 0):
+                    dp[i][j] = 1
+                else:
+                    dp[i][j] = (dp[i-1][j] + dp[i-1][j-1])%mod
         
-        for i in range(1 , n+1):
-            j = min(i , r)
-            while(j > 0):
-                dp[j] = ((dp[j-1] % mod) + (dp[j] % mod) ) % mod 
-                j -= 1
-                
-        return dp[r]
+        return dp[n][r] 
+    
 
 #{ 
 #  Driver Code Starts
