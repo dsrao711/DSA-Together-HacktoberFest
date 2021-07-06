@@ -9,7 +9,8 @@ class Node:
 # your task is to complete this function
 
 class Solution:
-    #Function to convert a binary tree into its mirror tree.
+    #Function to convert a binary tree into its mirror tree
+    
     def createNode(self , val):
         mirror = Node(0)
         mirror.data = val
