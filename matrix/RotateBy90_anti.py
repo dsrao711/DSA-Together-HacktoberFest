@@ -1,55 +1,128 @@
+# https://practice.geeksforgeeks.org/problems/mirror-tree/1/
 
-#https://practice.geeksforgeeks.org/problems/rotate-by-90-degree0356/1/?company[]=Morgan%20Stanley&company[]=Morgan%20Stanley&page=1&query=company[]Morgan%20Stanleypage1company[]Morgan%20Stanley#
 
-def transpose(matrix , n):
-    for i in range(n):
-        for j in range(n):
-            temp = matrix[i][j]
-            matrix[i][j] = matrix[j][i]
-            matrix[j][i] = temp
+'''
+class Node:
+    def _init_(self, val):
+        self.right = None
+        self.data = val
+        self.left = None
+'''
+# your task is to complete this function
+
+class Solution:
+    #Function to convert a binary tree into its mirror tree.
+   
+
+    def mirror(self,root):
+        
+        # Code here
+        if(root == None):
+            return
+        else:
+            temp = root
+            self.mirror(root.left)
+            self.mirror(root.right)
+            temp = root.left
+            root.left = root.right
+            root.right = temp
             
-    
-def reverse_columns(matrix , n):
-    
-    for i in range(n):
-        j = 0
-        k = n - 1
-        while(j < k):
-            temp = matrix[j][i]
-            matrix[j][i] = matrix[k][i]
-            matrix[k][i] = temp
-            
-            k -= 1
-            j += 1
-    
-def rotate(matrix): 
-    #code here
-    n = len(matrix[0])
-    transpose(matrix , n)
-    reverse_columns(matrix , n)
-    return matrix
-    
+        return root
+        
+        
 
 #{ 
 #  Driver Code Starts
 #Initial Template for Python 3
 
+from collections import deque
+# Tree Node
+class Node:
+    def __init__(self, val):
+        self.right = None
+        self.data = val
+        self.left = None
 
-if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        N=int(input())
-        arr=[int(x) for x in input().split()]
-        matrix=[]
 
-        for i in range(0,N*N,N):
-            matrix.append(arr[i:i+N])
+def inorderTraversalUtil(root):
+    # Code here
+    if root is None:
+        return
+    inorderTraversalUtil(root.left)
+    print(root.data, end=' ')    
+    inorderTraversalUtil(root.right)
 
-        rotate(matrix)
-        for i in range(N): 
-            for j in range(N): 
-                print(matrix[i][j], end =' ') 
-            print() 
+def inorderTraversal(root):
+    # Code here
+    inorderTraversalUtil(root)
+    print()
+    
+# Function to Build Tree   
+def buildTree(s):
+    #Corner Case
+    if(len(s)==0 or s[0]=="N"):           
+        return None
+        
+    # Creating list of strings from input 
+    # string after spliting by space
+    ip=list(map(str,s.split()))
+    
+    # Create the root of the tree
+    root=Node(int(ip[0]))                     
+    size=0
+    q=deque()
+    
+    # Push the root to the queue
+    q.append(root)                            
+    size=size+1 
+    
+    # Starting from the second element
+    i=1                                       
+    while(size>0 and i<len(ip)):
+        # Get and remove the front of the queue
+        currNode=q[0]
+        q.popleft()
+        size=size-1
+        
+        # Get the current node's value from the string
+        currVal=ip[i]
+        
+        # If the left child is not null
+        if(currVal!="N"):
+            
+            # Create the left child for the current node
+            currNode.left=Node(int(currVal))
+            
+            # Push it to the queue
+            q.append(currNode.left)
+            size=size+1
+        # For the right child
+        i=i+1
+        if(i>=len(ip)):
+            break
+        currVal=ip[i]
+        
+        # If the right child is not null
+        if(currVal!="N"):
+            
+            # Create the right child for the current node
+            currNode.right=Node(int(currVal))
+            
+            # Push it to the queue
+            q.append(currNode.right)
+            size=size+1
+        i=i+1
+    return root
+    
+    
+if __name__=="__main__":
+    t=int(input())
+    for _ in range(0,t):
+        s=input()
+        root=buildTree(s)
+        Solution().mirror(root)
+        inorderTraversal(root)
+        
         
 
 # } Driver Code Ends
