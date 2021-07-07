@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root) :
       
       if root == None:
         return
@@ -33,3 +33,6 @@ class Solution:
       out.reverse()
       
       return out
+    
+    
+#https://www.youtube.com/watch?v=kcTcfOWFizA
