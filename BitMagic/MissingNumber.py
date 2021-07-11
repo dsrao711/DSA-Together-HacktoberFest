@@ -1,4 +1,4 @@
-
+#https://practice.geeksforgeeks.org/problems/missing-number-in-array1416/1/
 
 class Solution:
     def MissingNumber(self,a,N):
@@ -12,8 +12,6 @@ class Solution:
 #{ 
 #  Driver Code Starts
 #Initial Template for Python 3
-
-
 
 
 t=int(input())
