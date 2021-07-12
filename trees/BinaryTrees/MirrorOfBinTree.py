@@ -1,4 +1,5 @@
 
+# https://practice.geeksforgeeks.org/problems/mirror-tree/1/?company[]=Accolite&company[]=Accolite&page=1&query=company[]Accolitepage1company[]Accolite#
 '''
 class Node:
     def _init_(self, val):
@@ -9,25 +10,17 @@ class Node:
 # your task is to complete this function
 
 class Solution:
-    #Function to convert a binary tree into its mirror tree
-    
-    def createNode(self , val):
-        mirror = Node(0)
-        mirror.data = val
-        mirror.right = None
-        mirror.left = None
-        
+    #Function to convert a binary tree into its mirror tree.
+   
 
     def mirror(self,root):
-        
-        # Code here
+   
         if(root == None):
             return
         else:
-            temp = root
-            self.mirror(root.left)
-            self.mirror(root.right)
-            temp = root.left
+            self.mirror(root.left) #Call the left subtree
+            self.mirror(root.right) # call the right subtree
+            temp = root.left  # swap the left and right nodes
             root.left = root.right
             root.right = temp
             
@@ -41,7 +34,7 @@ class Solution:
 
 
 
-
+#Contributed by Sudarshan Sharma
 from collections import deque
 # Tree Node
 class Node:
