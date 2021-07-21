@@ -41,3 +41,33 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+
+# This problem was asked to me during my Accolite interview. I implemented the stack solution 
+
+
+from collections import deque
+
+def sample(string):
+    stack = deque()
+    
+    for i in string:
+        if(len(stack) >= 1):
+            top = stack.pop()
+            if(top != i):
+                stack.append(top)
+                stack.append(i)
+        else:
+            stack.append(i)
+             
+    return stack
+            
+test = 'abccbd'
+op = sample(test)
+answer = ""
+
+for i in op :
+    print(i)
+    
+
+# abccbd - > ad

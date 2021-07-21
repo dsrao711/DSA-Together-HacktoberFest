@@ -2,7 +2,6 @@
 # Hastables are basically Dictionaries in Python 
 # Below is the implementation of HashTables (Referred Code Basics YT channel)
 
-
 class HashTable:  
     def __init__(self):
         self.MAX = 100
