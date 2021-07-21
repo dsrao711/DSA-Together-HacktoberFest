@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/count-and-say/
+# Link : https://leetcode.com/problems/count-and-say/
 
 # Example : 
 
@@ -12,7 +12,6 @@
 
 
 # Approach : 
-
 # countAndSay(n) is the way you would "say" the digit string from countAndSay(n-1), which is then converted into a different digit string.
 
 # Consider the n-1 th string , keep checking the count of each charachter of the string 
@@ -30,7 +29,6 @@ class Solution:
             return ("1")
         
         s = self.countAndSay(n-1)
-        
         ret = ""
         cnt = 1
         i = 1
