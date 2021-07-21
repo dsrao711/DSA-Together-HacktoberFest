@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/longest-palindromic-substring/
+
 class Solution(object):
     def longestPalindrome(self, s):
         """
@@ -26,8 +28,8 @@ class Solution(object):
         return res
 
     def helper(self, l, r, s):
-
-        # if inbound and palindrome, move left left and right right
+    # Helper function to check if the left pointer and right pointer are equal 
+    # if inbound and palindrome, move left left and right right
         
         while (l >= 0 and r < len(s) and s[l] == s[r]):
             l -= 1
