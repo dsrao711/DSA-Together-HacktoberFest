@@ -1,24 +1,21 @@
-# https://www.geeksforgeeks.org/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/
 
-def maxSubsString(x):
-    count = 0
-    count_0 = 0
-    count_1 = 0
-    n = len(x)
-    for i in range(0 , n):
-        if(x[i] == 0):
-            count_0 += 1
-        if(x[i] == 1):
-            count_1 += 1
-        if(count_0 == count_1):
-            count += 1
-            
-        if(count == 0):
-            return -1
-        else:
-            return count
-   
+#https://leetcode.com/problems/count-binary-substrings/submissions/
+# Referred : https://www.youtube.com/watch?v=MrVfk4HKAuU
 
-binary_string = input()
-op = maxSubsString(binary_string)
-print(op)
+class Solution(object):
+    def countBinarySubstrings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        groups = [1]
+        for i in range(1, len(s)):
+            if s[i-1] != s[i]:
+                groups.append(1)
+            else:
+                groups[-1] += 1
+
+        ans = 0
+        for i in range(1, len(groups)):
+            ans += min(groups[i-1], groups[i])
+        return ans
