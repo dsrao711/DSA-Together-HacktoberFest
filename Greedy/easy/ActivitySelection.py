@@ -22,11 +22,25 @@
 # the end time of the previous meeting
 
 # Approach :
+
 # Variables  :
-# i = Track the s
-# 1. Cmake a list of Meetings with start time and end time 
-# 2. Sort the list wrt end time and then sort it wrt to start time
-# 3. 
+# i = Track the previous meetings -> i = 0
+# j = Track the current meetings  -> j = 1
+# counter = Count of number of meetings that can be scheduled  -> counter = 1
+# By default the first meeting will be scheduled , so counter initialized with value 1
+
+# 1. Make a list of Meetings with start time and end time 
+# 2. Sort the list wrt start time and then sort it wrt to end  time
+# 3. Iterate through the meetings and check the condition that whether the start time of the current 
+# meeting is greater than the end time of the previous meeting 
+
+# for j in range(1, n):
+#   if(Meetings[j][0] > Meetings[i][1]):
+#       counter ++
+#       i = j
+
+# 4. Return counter
+
 
 import sys
 import io
@@ -41,8 +55,23 @@ class Solution:
         for i in range(n):
             Meetings.append([start[i] , end[i]])
             
-        print(Meetings)
-        return 4
+        Meetings.sort(key = lambda x : x[0])
+        Meetings.sort(key = lambda x : x[1])
+        # To track the previous meeting
+        i = 0 
+        # To track the current meeting
+        j = 1
+        # First meeting always gets selected
+        counter = 1
+        
+        for j in range(1,n):
+            # Condition for scheduling
+            if(Meetings[j][0] > Meetings[i][1]):
+                counter += 1
+                i = j
+                
+        # print(Meetings)
+        return counter
     
 if __name__ == '__main__':
     test_cases = int(input())
