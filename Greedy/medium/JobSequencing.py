@@ -1,70 +1,62 @@
+# Problem : https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#
+class Solution:
+    
+    #Function to find the maximum profit and the number of jobs done.
+    def JobScheduling(self,Jobs,n):
+        
+        # code here
+        l = []
+        for job in Jobs:
+            l.append([job.profit , job.deadline])
+            
+    
+        l.sort(key = lambda x : x[1])
+        l.sort(key = lambda x : x[0] , reverse = True)
+      
+        
+        results = [False]*n
+        profit = 0
+        counter = 0
+        
+        for i in range(0 , n):
+            for j in range(min(n-1 , l[i][1] - 1) , -1 , -1):
+                if(results[j] == False):
+                    counter += 1
+                    profit += l[i][0]
+                    results[j] = True
+                    break
+                
+        return ([counter , profit])
+                    
+                
+        
+# Driver Code
 
-from functools import cmp_to_key
+import atexit
+import io
+import sys
 
-# A job has start time, finish time and profit
+
 class Job:
-	
-	def __init__(self, start, finish, profit):
-		
-		self.start = start
-		self.finish = finish
-		self.profit = profit
+    '''
+    Job class which stores profit and deadline.
+    '''
+    def __init__(self,profit=0,deadline=0):
+        self.profit = profit
+        self.deadline = deadline
+        self.id = 0
 
-# A utility function that is used for
-# sorting events according to finish time
-def jobComparataor(s1, s2):
-	
-	return s1.finish < s2.finish
-
-# Find the latest job (in sorted array) that
-# doesn't conflict with the job[i]. If there
-# is no compatible job, then it returns -1
-def latestNonConflict(arr, i):
-	
-	for j in range(i - 1, -1, -1):
-		if arr[j].finish <= arr[i - 1].start:
-			return j
-			
-	return -1
-
-# A recursive function that returns the
-# maximum possible profit from given
-# array of jobs. The array of jobs must
-# be sorted according to finish time
-def findMaxProfitRec(arr, n):
-	
-	# Base case
-	if n == 1:
-		return arr[n - 1].profit
-
-	# Find profit when current job is included
-	inclProf = arr[n - 1].profit
-	i = latestNonConflict(arr, n)
-	
-	if i != -1:
-		inclProf += findMaxProfitRec(arr, i + 1)
-
-	# Find profit when current job is excluded
-	exclProf = findMaxProfitRec(arr, n - 1)
-	return max(inclProf, exclProf)
-
-# The main function that returns the maximum
-# possible profit from given array of jobs
-def findMaxProfit(arr, n):
-	
-	# Sort jobs according to finish time
-	arr = sorted(arr, key = cmp_to_key(jobComparataor))
-	return findMaxProfitRec(arr, n)
-
-# Driver code
-values = [ (3, 10, 20), (1, 2, 50),
-		(6, 19, 100), (2, 100, 200) ]
-arr = []
-for i in values:
-	arr.append(Job(i[0], i[1], i[2]))
-	
-n = len(arr)
-
-print("The optimal profit is", findMaxProfit(arr, n))
-
-
+if __name__ == '__main__':
+    test_cases = int(input())
+    for cases in range(test_cases) :
+        n = int(input())
+        info = list(map(int,input().strip().split()))
+        Jobs = [Job() for i in range(n)]
+        for i in range(n):
+            Jobs[i].id = info[3*i]
+            Jobs[i].deadline = info[3 * i + 1]
+            Jobs[i].profit=info[3*i+2]
+        ob = Solution()
+        res = ob.JobScheduling(Jobs,n)
+        print (res[0], end=" ")
+        print (res[1])
