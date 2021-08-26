@@ -65,8 +65,16 @@
 # counter => No of jobs that can be performed . counter = 0
 # profit => Total profit . profit = 0
 
+# Steps
+# Consider x => job.deadline
+#1. Sort the jobs in descending order of profits
+#2. for i in jobs:
+# 		for j in (min(n , x-1) , -1):
+#			counter ++
+#			profit += job.profit
 
-
+# We did min(n , x-1) so that even if the deadline is more than n , the list doesnt go out of range
+#3. return counter , profit
 
 # Code : 
 # TC : O(n^2)
