@@ -1,7 +1,7 @@
 #https://leetcode.com/problems/pascals-triangle/
 
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows) :
         triangle = [[1]*i for i in range(1,numRows+1)]
         
         i = 1
