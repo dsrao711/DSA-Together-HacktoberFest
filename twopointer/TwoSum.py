@@ -1,23 +1,21 @@
-
-
+# https://leetcode.com/problems/two-sum/submissions/
 
 class Solution(object):
     def twoSum(self, nums, target):
         """
-        :type numbers: List[int]
+        :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        start, end = 0, len(nums) - 1
+        n = len(nums)
+        hashmap = {}
+        arr = []
         
-        while start != end:
-            sum = nums[start] + nums[end]
-            if sum > target:
-                end -= 1
-            elif sum < target:
-                start += 1
+        for i in range(0,n):
+            if target-nums[i] in hashmap:
+                arr.append(hashmap[target-nums[i]])
+                arr.append(i)
+                return arr
+            
             else:
-                return [start + 1, end + 1]
-
-        
-        
+                hashmap[nums[i]] = i

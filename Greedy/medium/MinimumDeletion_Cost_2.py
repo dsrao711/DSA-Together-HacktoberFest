@@ -18,7 +18,6 @@
 # ans  (Total amount to delete the letters)
 
 
-
 class Solution(object):
     def minCost(self, s, cost):
         """
