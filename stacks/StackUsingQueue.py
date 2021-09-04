@@ -11,8 +11,7 @@ from queue import Queue
     queue_1 = [] # first queue
     queue_2 = [] # second queue
    '''
-   
-   
+
    
 #Function to push an element into stack using two queues.
 def push(x):
