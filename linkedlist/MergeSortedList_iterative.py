@@ -1,6 +1,7 @@
 #https://leetcode.com/problems/merge-two-sorted-lists/
 
-# Definition for singly-linked list.
+# Recursive method
+
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
@@ -14,28 +15,17 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        # Store the final result in a LL res
+        if l1 is None:
+                return l2
+        if l2 is None:
+            return l1
 
-        res = ListNode()
-        p = res
-        
-        while(l1 and l2):
-        # add elements in ascending order
-          if(l1.val < l2.val):
-            p.next = l1
-            l1 = l1.next
-          else:
-            p.next = l2
-            l2 = l2.next
-            
-          p = p.next
-        # Add remaining elements from l1 and l2
-        if(l1):
-          p.next = l1
+        if l1.val <= l2.val:
+            l1.next = self.mergeTwoLists(l1.next, l2) # l1 will be the new head and the rest is to be merged
+            return l1
         else:
-          p.next = l2
-        
-        return res.next
+            l2.next = self.mergeTwoLists(l2.next, l1) # l2 will be the new head and the rest is to be merged
+            return l2
         
         
         
