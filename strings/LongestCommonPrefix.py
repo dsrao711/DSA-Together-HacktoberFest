@@ -18,15 +18,27 @@
 
 
 # Working
-
 # prefix = "flower"
 
+# i = 1
 # prefix = "flower" , word = "flow"
+
 # f = f , pass
 # l = l , pass 
 # o = o , pass
-# w = w , 
+# w = w , pass
+# i = 4 , 4 >= len("flow") , prefix = "flow"  , break
 
+
+
+# i = 2 
+# prefix = "flow" , word = "flight"
+# f = f , pass
+# l = l , pass
+# o != i  => prefix = prefix[:i] = "fl" , break
+
+
+# o/p = "fl"
 
 
 class Solution(object):
