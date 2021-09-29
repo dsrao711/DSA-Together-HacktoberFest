@@ -5,8 +5,7 @@
 
 # TC : O(mn)
 
-# Approach :
-
+# Approach : https://somber-approval-8f1.notion.site/DSA-Solutions-34100a8ab92f42029011dcf591668343
 
 
 class Solution(object):
