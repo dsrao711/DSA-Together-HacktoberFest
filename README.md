@@ -2,47 +2,28 @@
 
 <img width="400" src="dsa-together.png" alt="Algorithms">
 
-<div style = "display : flex ; justify-content : center ; align-items : center">
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
-
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/blob/main/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/dsrao711/DSA-Together-HacktoberFest"></a>
-
-</div>
-
-<div style = "display : flex ; justify-content : center ; align-items : center">
-
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/dsrao711/DSA-Together-HacktoberFest"></a>
-
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/dsrao711/DSA-Together-HacktoberFest"></a>
-
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/dsrao711/DSA-Together-HacktoberFest"></a>
 
-</div>
 
 </h1>
 
 <p align = "center"> 
-Data structures and Algorithms is one of the most challenging stuffs to handle but Jeetu Bhaiyya once said 
+Data structures and Algorithms is one of the most challenging stuffs to handle but Jeetu Bhaiyya once said , 
+<br>
+<br>
+<img width="400" src="dsa-tough.jpeg" alt="Algorithms" align = "center">
 </p>
 
-<br>
+<h1 align = "center" > </h1>
 
-<div style = "display : flex ; justify-content : center ; align-items : center">
-<img width="400" src="dsa-tough.jpeg" alt="Algorithms">
-</div>
-
-<br>
-
-<hr>
-
-<br>
-
-####  Hey there folks , Happy Hacktober 🎃  Welcome to a beginner friendly repository for HacktoberFest 2021 
+<h4 align = "center" > Hey there folks , Happy Hacktober 🎃  Welcome to a beginner friendly repository for HacktoberFest 2021  </h4>
 
 <br>
 
@@ -74,5 +55,5 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 
 <div style = "display : flex ; justify-content : center ; align-items : center">
-🍁 Thank You ! 🍁
+Thank You 🎃
 <div>
