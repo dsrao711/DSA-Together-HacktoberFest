@@ -42,6 +42,22 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 ## 🍁 Table of Content
 
+- <a href = "/Algorithms"> Algorithms </a>
+- <a href = "/array"> Arrays </a>
+- <a href = "/strings"> Strings </a>
+- <a href = "/linkedlist"> Linked List </a>
+- <a href = "/stacks"> Stacks </a>
+- <a href = "/queues"> Queues </a>
+- <a href = "/trees/BinaryTrees"> Binary Trees </a>
+- <a href = "/trees/BST"> BST </a>
+- <a href = "/heaps"> Heaps </a>
+- <a href = "/DynamicProgramming"> Dynamic Programming </a>
+- <a href = "/Greedy"> Greedy </a>
+- <a href = "/Backtracking"> Backtracking </a>
+- <a href = "/math"> Math </a>
+- <a href = "/matrix"> Matrix </a>
+- <a href = "/BitMagic"> Bit Magic </a>
+
 <br>
 
 ## 🍁 References
