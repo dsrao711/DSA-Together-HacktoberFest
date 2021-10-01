@@ -1,12 +1,11 @@
-
 class Solution:
+    
     def insert(self, alist, index, n):
-        #code here
         sort = self.insertionSort(alist , n)
         return sort
+    
     #Function to sort the list using insertion sort algorithm.    
     def insertionSort(self, alist, n):
-        #code here
         for i in range(1 , n):
             temp = alist[i]
             j = i - 1
@@ -14,10 +13,8 @@ class Solution:
                 alist[j+1] = alist[j]
                 j -= 1
             alist[j+1] = temp
-            
+                      
 
-#{ 
-#  Driver Code Starts
 if __name__=="__main__":
     t=int(input())
     for i in range(t):
@@ -30,4 +27,3 @@ if __name__=="__main__":
             print(arr[i],end=" ")
     
         print()
-# } Driver Code Ends

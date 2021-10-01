@@ -1,5 +1,4 @@
-#Geeks for Geeks
-
+# Geeks for Geeks
 class Solution: 
     def select(self, arr, i):
         # code here 
@@ -17,11 +16,6 @@ class Solution:
             minimum = self.select(arr , i)
             if(minimum != i):
                 arr[i] , arr[minimum] = arr[minimum] , arr[i]
-                
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
 if __name__ == '__main__': 
     t = int(input())
@@ -32,4 +26,3 @@ if __name__ == '__main__':
         for i in range(n):
             print(arr[i],end=" ")
         print()
-# } Driver Code Ends
