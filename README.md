@@ -12,11 +12,9 @@
 
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/blob/main/LICENSE.md"><img alt="GitHub license" src="https://img.shields.io/github/license/dsrao711/DSA-Together-HacktoberFest"></a>
 
-
 </div>
 
 <div style = "display : flex ; justify-content : center ; align-items : center">
-
 
 <a href="https://github.com/dsrao711/DSA-Together-HacktoberFest/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/dsrao711/DSA-Together-HacktoberFest"></a>
 
@@ -29,9 +27,23 @@
 </h1>
 
 <p align = "center"> 
-
-
-
-
+Data structures and Algorithms is one of the most challenging stuffs to handle but Jeetu Bhaiyya once said 
 </p>
+
+<br>
+
+<div style = "display : flex ; justify-content : center ; align-items : center">
+<img width="400" src="dsa-tough.jpeg" alt="Algorithms">
+</div>
+
+<br>
+
+
+- DSA-Together is a collection of python solutions for problems from DSA-450 Sheet by Love Babbar , Leetcode Sheet by Fraz , important algorithms and  concepts necessary for becoming an excellent programmer . 
+
+- The main motive here is to learn together by solving problems , learning from other's approaches,  providing a better solution 
+
+- Problems from any platform like Hackerank , Leetcode , Hacker earth , etc are most welcome
+
+- For Contributing and setup , read <a href = "/CONTRIBUTING.md"> here</a>
 
