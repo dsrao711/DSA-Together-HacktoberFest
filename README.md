@@ -38,6 +38,15 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 <br>
 
+<hr>
+
+<br>
+
+####  Hey there folks , Happy Hacktober 🎃  Welcome to a beginner friendly repository for HacktoberFest 2021 
+
+<br>
+
+## 🍁 What is this repository about ??
 
 - DSA-Together is a collection of python solutions for problems from DSA-450 Sheet by Love Babbar , Leetcode Sheet by Fraz , important algorithms and  concepts necessary for becoming an excellent programmer . 
 
@@ -47,3 +56,23 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 - For Contributing and setup , read <a href = "/CONTRIBUTING.md"> here</a>
 
+
+<br>
+
+## 🍁 Table of Content
+
+<br>
+
+## 🍁 References
+
+- <a href = "https://docs.google.com/spreadsheets/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/edit?usp=drive_web&ouid=116716825879285817121&dls=true"> DSA 450 Sheet by Love Babbar</a>
+
+-  <a href = "https://docs.google.com/spreadsheets/d/1-wKcV99KtO91dXdPkwmXGTdtyxAfk1mbPXQg81R9sFE/edit#gid=0"> Leetcode DSA sheet by Fraz </a>
+
+<br>
+
+
+
+<div style = "display : flex ; justify-content : center ; align-items : center">
+🍁 Thank You ! 🍁
+<div>
