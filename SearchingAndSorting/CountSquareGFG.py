@@ -5,10 +5,6 @@ class Solution:
         # code here 
         return int((N - 1)**0.5)
 
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 import math
 
 if __name__ == '__main__': 
@@ -18,4 +14,3 @@ if __name__ == '__main__':
         
         ob = Solution()
         print(ob.countSquares(N))
-# } Driver Code Ends

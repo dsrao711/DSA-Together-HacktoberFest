@@ -18,12 +18,7 @@ def find(arr,n,x):
         return [-1 , -1]
         
     return op
-    
-    
-                
-
-#{ 
-#  Driver Code Starts
+                 
 t=int(input())
 for _ in range(0,t):
     l=list(map(int,input().split()))
@@ -32,4 +27,3 @@ for _ in range(0,t):
     arr=list(map(int,input().split()))
     ans=find(arr,n,x)
     print(*ans)
-# } Driver Code Ends
