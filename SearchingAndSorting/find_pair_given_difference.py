@@ -1,5 +1,6 @@
-
 #https://practice.geeksforgeeks.org/problems/find-pair-given-difference1559/1#
+
+# Approach : 
 
 # Using Two Pointer techq
 # Sort the array before applying two pointer approach
@@ -27,8 +28,7 @@ class Solution:
         else:
             return False
             
-            
-                
+               
 
 #{ 
 #  Driver Code Starts

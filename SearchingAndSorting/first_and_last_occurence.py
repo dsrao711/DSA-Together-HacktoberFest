@@ -1,7 +1,6 @@
-# https://practice.geeksforgeeks.org/viewSol.php?subId=4c93efc2627e9e47ceb06b5f1aaa5d03&pid=703459&user=divyarao1
+#Link : https://practice.geeksforgeeks.org/viewSol.php?subId=4c93efc2627e9e47ceb06b5f1aaa5d03&pid=703459&user=divyarao1
 
 def find(arr,n,x):
-    # code here
     arr.sort()
     op = []
     for i in range(0 , n) :
@@ -16,7 +15,6 @@ def find(arr,n,x):
         
     if(len(op) == 0):
         return [-1 , -1]
-        
     return op
                  
 t=int(input())

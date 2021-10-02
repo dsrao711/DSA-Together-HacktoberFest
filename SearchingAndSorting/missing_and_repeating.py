@@ -1,5 +1,5 @@
+# Link : https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1
 
-# https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1
 class Solution:
     
     def findTwoElement( self,arr, n): 

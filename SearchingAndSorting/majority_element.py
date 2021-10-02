@@ -1,8 +1,8 @@
-    
+# link : https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1
+
 class Solution():
 
     def majorityElement(self, arr, n):
-        #Your code here
         arr.sort()
         count = 1
         max_ele = -1
@@ -24,20 +24,15 @@ class Solution():
                 
                 if(max_ele > (n//2)):
                     flag = 1
-                    break
-            
-            
+                    break 
+                
         if(flag == 1):
             return ele
         elif(len(arr) == 1):
             return arr[0]
         else:
             return -1
-        
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
 import math
 
@@ -62,4 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# } Driver Code Ends
