@@ -74,6 +74,11 @@ Time Complexity :
 
 <br>
 
+Note : 
+- Contributions in any form (Code, Documentation, etc) submitted should be the own work of the contributor and plagiarism is highly discouraged.
+- Please do not spam by making unnecessary changes in the code or just +1 insertions for the sake of getting pull requests. Open source is all about learning , If any sort of spam is observed during code review , a spam label will be added and the PR wont be merged
+
+
 Happy Coding !!!
 
 
