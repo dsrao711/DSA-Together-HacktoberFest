@@ -32,11 +32,6 @@ def Pop(stack1,stack2):
     
     return ele
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-#contributed by RavinderSinghPB
 if __name__ == '__main__':
     test_cases = int(input())
     for cases in range(test_cases):
@@ -57,4 +52,3 @@ if __name__ == '__main__':
                 i+=1
                 
         print()
-# } Driver Code Ends

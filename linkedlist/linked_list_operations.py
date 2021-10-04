@@ -8,6 +8,7 @@ class LinkedList :
         self.start = None
 
 # View List 
+
     def viewList(self):
         if self.start == None : 
             print("List is empty")
