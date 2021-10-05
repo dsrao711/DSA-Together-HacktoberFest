@@ -4,7 +4,7 @@ class Solution:
         number = str(n)
         arm = 0
         for i in range(0 , len(number)):
-            arm += pow(int(number[i]) , 3)
+            arm += pow(int(number[i]) , len(number))
         if(arm == n):
             return "Yes"
         else:
