@@ -37,11 +37,8 @@ class Solution(object):
         return balanced_strings
     
 """
-
 Time complexity  : O(n)
-
 """
-
 
 
 """
@@ -52,9 +49,10 @@ We will traverse through the string and increase the count if L is found and dec
 
 """
 
+
 def StringSplit(s) -> int:
     #Initializing count to 0  to keep a track of  adjacent L and R
-     #res to store the total number of substrings
+    #res to store the total number of substrings
     current = 0
     res = 0
     for i, c in enumerate(s):
@@ -77,7 +75,6 @@ Time complexity : O(N) where N is the length of the string
 OUTPUT :
 Enter a string : LRLRLLRRLR
 The number of substrings formed is :  4
-
 
 """
 
