@@ -1,3 +1,9 @@
+#Link to the problem : https://leetcode.com/problems/middle-of-the-linked-list/solution/
+#Time Complexity : O(n)
+
+#CODE:
+
+#Defining Structure
 class Node:
     def __init__(self, data):
        self.data = data
@@ -18,9 +24,11 @@ class LinkedList:
             self.last_node = self.last_node.next
  
  
+#Function to find the middle element
 def FindMiddle(list):
     current = list.head
     length = 0
+    #loop to find total length
     while current:
         current = current.next
         length = length + 1
@@ -30,6 +38,7 @@ def FindMiddle(list):
         current = current.next
  
     if current:
+    #if even elements then select latter
         if length % 2 == 0:
             print(current.next.data)
         else:
