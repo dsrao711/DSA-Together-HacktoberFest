@@ -1,12 +1,13 @@
 #https://practice.geeksforgeeks.org/problems/missing-number-in-array1416/1/
 
 class Solution:
-    def MissingNumber(self,a,N):
-        # code here
-
-        total = (N)*(N+1)/2
-        total_a = sum(a)
-        return int(total - total_a)
+    def MissingNumber(self,array,n):
+        ans = 0 
+        for i in range(n-1):
+            ans^=array[i]
+            ans^=(i+1)
+        ans^=n
+        return ans
         
 
 #{ 
