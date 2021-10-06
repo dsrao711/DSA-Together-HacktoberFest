@@ -1,0 +1,30 @@
+import sys
+
+input = sys.stdin.readline
+
+def solve():
+	n, d = map(int, input().split())
+	*a, = map(int, input().split())
+	q = []
+	w = [int(1e9)]*n
+	for i in range(n):
+		if a[i] == 0:
+			q.append(i)
+			w[i] = 0
+	i = 0
+	while i < len(q):
+		x = q[i]
+		i += 1
+		y = (x + d) % n
+		if w[y] > n:
+			w[y] = w[x] + 1
+			q.append(y)
+	#print(w)
+	r = max(w)
+	if r > n:
+		print(-1)
+	else:
+		print(r)
+
+for i in range(int(input())):
+	solve()
