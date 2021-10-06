@@ -19,10 +19,7 @@ print(course.find('cat')) #Returns -1
 # print(course.index('cat')) #Gives error
 
 print(course.count('H'))  #counts the occurence
-
 print(course.rstrip('7')) #Removes blank spaces
-
-
 
 #Special Operators
 print('Python' in course) #in operator

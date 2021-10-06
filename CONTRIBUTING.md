@@ -8,8 +8,8 @@ Developers are highly welcome to contribute to this project by modifying the exi
 
 - Check the issues created in the issues section and get yourself assigned one by commenting. Issues will be assigned on "First come first serve" basis. 
 
-- Create a new issue whether you are adding a new program or optimizing the existing solution. After the issue is assigned to you, start working on it and make a pull request as mentioned in the steps below. 
-<i> DO NOT CREATE A PR WITHOUT GETTING AN ISSUE ASSIGNED BY THE MAINTAINER . ANY SUCH PR WONT BE MERGED </i>
+- Create a new issue whether you are adding a new program or optimizing the existing solution. After the issue is assigned to you, start working on it and make a pull request as mentioned in the steps below. <br>
+<i> DO NOT CREATE A PR WITHOUT GETTING AN ISSUE ASSIGNED BY THE MAINTAINER . </i>
 
 - When creating a PR, make sure to add the linked issue in the description. For example : "Closes #712"
 
