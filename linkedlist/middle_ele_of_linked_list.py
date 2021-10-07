@@ -7,6 +7,7 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
 class Solution(object):
     def middleNode(self, head):
         """
@@ -25,9 +26,7 @@ class Solution(object):
 
 # Approach 2 
 #Time Complexity : O(n)
-
-#CODE:
-
+# CODE : 
 #Defining Structure
 class Node:
     def __init__(self, data):

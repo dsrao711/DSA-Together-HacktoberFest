@@ -25,16 +25,7 @@ class Solution:
             root.right = temp
             
         return root
-        
-        
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-
-
-#Contributed by Sudarshan Sharma
 from collections import deque
 # Tree Node
 class Node:
@@ -124,5 +115,3 @@ if __name__=="__main__":
         inorderTraversal(root)
         
         
-
-# } Driver Code Ends
