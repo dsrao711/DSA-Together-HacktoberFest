@@ -1,10 +1,4 @@
-# Python3 program to print DFS traversal
-# from a given given graph
 from collections import defaultdict
-
-# This class represents a directed graph using
-# adjacency list representation
-
 
 class Graph:
 
@@ -58,5 +52,3 @@ g.addEdge(3, 3)
 
 print("Following is DFS from (starting from vertex 2)")
 g.DFS(2)
-
-# This code is contributed by Neelam Yadav
