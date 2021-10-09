@@ -48,6 +48,6 @@ class Solution:
 
 # main block
 if __name__ == "__main__":
-    text = input()   # takes the whole line of n numbers
+    text = input()   # takes the input
     result = Solution().maxNumberOfBalloons(text)
     print(result)
