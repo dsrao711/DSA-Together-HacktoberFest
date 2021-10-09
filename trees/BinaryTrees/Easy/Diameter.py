@@ -1,6 +1,8 @@
 
 # Link to the problem : https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1#
 
+# Time complexity – O(n)
+
 class Solution:
     
     #Function to return the diameter of a Binary Tree.
@@ -10,11 +12,14 @@ class Solution:
         if (root == None):
             return 0  
         
+        # Calculate left subtreee
         lh = self.height(root.left , ans )
+        # Calculate right subtree
         rh = self.height(root.right , ans )
-        
+        # Diamerter = root + left subtree + right subtree
         ans[0] = max(ans[0] , 1+lh+rh )
-        
+
+        # Returns height of the treee
         return 1 + max(lh,rh)
         
         
@@ -24,16 +29,13 @@ class Solution:
         if (root == None):
             return 0
         
+        # to store the diameter of tree from the helper function
         ans = [0]
-        
+        # Calling the Helper function 
         height_of_tree = self.height(root , ans)
         
         return ans[0]
         
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
 
 from collections import deque
@@ -116,4 +118,3 @@ if __name__=="__main__":
 
 
 
-# } Driver Code Ends
