@@ -1,90 +1,90 @@
-#https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1#
+
+#Link : https://leetcode.com/problems/implement-stack-using-queues/
 
 
-from queue import Queue
+"""
 
-#User function Template for python3
-'''
-    :param x: value to be inserted
-    :return: None
+For a list = [1,2,3,4]
 
-    queue_1 = [] # first queue
-    queue_2 = [] # second queue
-   '''
+Stack = [1 , 2 , 3 , 4]  -> Top = 4 
+Stack.pop = 4
 
-   
-#Function to push an element into stack using two queues.
-def push(x):
+Queue = [1 , 2 , 3 , 4 ] -> FIFO -> First ele = 1
+
+In order to make queue perform stack operations , we need to pop 4 i.e the last element 
+We will be using 2 queues here 
+
+POP : 
+1) Store all the elements in q1 = [1,2,3,4]
+2) Put all the n-1 elements from q1 in q2 such that q1 = [4] , q2 = [1,2,3]
+3) Popped element = q1.pop(0) = 4 , q1 = []
+4) Now since the last element is popped , make all the positions like before i.e
+    q1 = [1,2,3] , q2 = []
+
+Same logic applicable for TOP , no need to put the popped element in q2 as we just need to return the
+top value 
+
+"""
+
+class MyStack(object):
     
-    # global declaration
-    global queue_1
-    global queue_2
-    
-    # code here
-    queue_2.append(x)
-    
-    while(len(queue_1) != 0):
+    def __init__(self):
+        self.q1 = []
+        self.q2 = []
+
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        self.q1.append(x)
+
+
+    def pop(self):
+        """
+        :rtype: int
+        """
         
-        queue_2.append(queue_1.pop(0))
+        for i in range(len(self.q1) - 1):
+            self.q2.append(self.q1.pop(0))
+            
+        top_element = self.q1.pop(0)
+        
+        self.q1 , self.q2 = self.q2 , self.q1
+        
+        return top_element
         
         
-    queue_1 , queue_2 = queue_2 , queue_1
+
+    def top(self):
+        """
+        :rtype: int
+        """
+        for i in range(len(self.q1) - 1):
+            self.q2.append(self.q1.pop(0))
+            
+        top_element = self.q1.pop(0)
+        
+        self.q2.append(top_element)
+        
+        self.q1 , self.q2 = self.q2 , self.q1
+        
+        return top_element
+        
+        
+
+    def empty(self):
+        """
+        :rtype: bool
+        """
+        
+        return (len(self.q1) == 0)
+        
 
 
-#Function to pop an element from stack using two queues.     
-def pop():
-    
-    # global declaration
-    global queue_1
-    global queue_2
-    
-    # code here
-    
-    if(len(queue_1) == 0):
-        return -1
-    else:
-        return queue_1.pop(0)
-
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-import atexit
-import io
-import sys
-
-#Contributed by : Nagendra Jha
-
-_INPUT_LINES = sys.stdin.read().splitlines()
-input = iter(_INPUT_LINES).__next__
-_OUTPUT_BUFFER = io.StringIO()
-sys.stdout = _OUTPUT_BUFFER
-
-@atexit.register
-
-def write():
-    sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
-queue_1 = [] # first queue
-queue_2 = [] # second queue
-
-if __name__ == '__main__':
-    test_cases = int(input())
-    for cases in range(test_cases) :
-        n = int(input())
-        a = list(map(int,input().strip().split()))
-        i = 0
-        while i<len(a):
-            if a[i] == 1:
-                push(a[i+1])
-                i+=1
-            else:
-                print(pop(),end=" ")
-            i+=1
-
-        # clear both the queues
-        queue_1 = []
-        queue_2 = []
-        print()
-# } Driver Code Ends
+# Your MyStack object will be instantiated and called as such:
+# obj = MyStack()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.empty()
