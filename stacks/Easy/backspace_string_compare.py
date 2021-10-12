@@ -22,13 +22,16 @@ class Solution(object):
           stack = []
 
           for i in S : 
+            # IF a "#" is encountered , a backspace has to be performed 
             if i != "#":
               stack.append(i)
             elif stack : 
+              # Backspace
               stack.pop()
               
           return "".join(stack)
         
+        # Check if both strings are same after applying backspaces
         return build(s) == build(t)
             
         
