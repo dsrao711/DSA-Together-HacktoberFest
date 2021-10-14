@@ -1,3 +1,9 @@
+# Approach:
+# For k transactions we do 2k operations (1 buy and 1 sell)
+# If days < 2k, we can make any number of transactions and it will still be less than 2k, 
+# so it converts to infinte transactions problem (Buy And Sell Stock 2)
+# If days > 2k, we need to make atmost k transactions. This is similar to Buy And Sell Stock 3
+# There we keep track of 4 variables for 2 transactions. Here we create an array for k transactions.
 
 def maxProfit(prices, k):
     n=len(prices)

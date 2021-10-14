@@ -1,3 +1,7 @@
+# Approach:
+# We need to find the lowest point (valley) and the highest point (peak) such that peak is after valley.
+# Finding the difference between them will give us the maximum profit.
+# For this, we keep track of the lowest point (min_so_far) and the maximum profit (max_profit).
 
 def maxProfit(prices):
     min_so_far = prices[0]

@@ -1,3 +1,6 @@
+# Approach:
+# Just like Buy And Sell Stock 1, but here we have to keep track of consecutive peaks and valleys. 
+# If the price for a day is greater than previous day, we count it as a transaction and add the profit.
 
 def maxProfit(prices):
     min_so_far = prices[0]
