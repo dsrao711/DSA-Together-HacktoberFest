@@ -1,6 +1,10 @@
 
 # https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/submissions/
 
+
+# Approach without using stacks : 'Strings/Easy/super_reduced_string.py'
+
+
 class Solution(object):
     def removeDuplicates(self, s):
         """
