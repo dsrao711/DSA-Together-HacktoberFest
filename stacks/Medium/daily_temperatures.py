@@ -49,7 +49,7 @@ class Solution(object):
                 # Store the difference in op array
                 op[prev_day] = curr_day - prev_day
                 
-            # Else push the current 
+            # Else push the curr_day until the next greater temp is not found
             stack.append(curr_day)
             
         return op
