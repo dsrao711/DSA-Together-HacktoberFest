@@ -1,4 +1,6 @@
 """
+Link: https://leetcode.com/problems/scramble-string/
+
 We can scramble a string s to get a string t using the following algorithm:
 
 If the length of the string is 1, stop.
@@ -24,36 +26,32 @@ The algorithm stops now and the result string is "rgeat" which is s2.
 As there is one possible scenario that led s1 to be scrambled to s2, we return true.
 """
 from collections import defaultdict
+class Solution:
+    def isScramble(self, a: str, b: str) -> bool:
+        if len(a)!=len(b):
+            return False
+        if a=="" and b=="":
+            return True
+        self.mp=defaultdict(lambda:-1)
+        
+        return self.scrambledString(a,b)
+    
+    def scrambledString(self,a,b):
+        if a==b:
+            return True
+        if len(a)<=1:
+            return False
+        key=a+" "+b
+        if self.mp[key]!= -1:
+            return self.mp[key]
 
-def scrambledString(a,b):
-    if a==b:
-        return True
-    if len(a)<=1:
-        return False
-    key=a+" "+b
-    if mp[key]!= -1:
-        return mp[key]
-    n=len(a)
-    flag=False
+        n=len(a)
+        flag=False
 
-    for i in range(1,n):
-        print(flag,i)
-        #condition 1 or condition 2 
-        print(a[:i],b[n-i:],a[i:],b[:n-i])
-        print(a[:i],b[:i],a[i:],b[i:])
-        if (scrambledString(a[:i],b[n-i:]) and scrambledString(a[i:],b[:n-i])) or (scrambledString(a[:i],b[:i]) and scrambledString(a[i:],b[i:])):
-            flag=True
-            break
-    mp[key]=flag
-    return flag
-
-a="abb"
-b="bba"
-mp=defaultdict(lambda:-1)
-
-if len(a)!=len(b):
-    print("False")
-if a=="" and b=="":
-    print("True")
-
-print(scrambledString(a,b))
+        for i in range(1,n):
+            #condition 1 or condition 2 
+            if (self.scrambledString(a[:i],b[n-i:]) and self.scrambledString(a[i:],b[:n-i])) or (self.scrambledString(a[:i],b[:i]) and self.scrambledString(a[i:],b[i:])):
+                flag=True
+                break
+        self.mp[key]=flag
+        return flag
