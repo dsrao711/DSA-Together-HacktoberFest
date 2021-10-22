@@ -2,6 +2,21 @@
 Link - https://leetcode.com/problems/n-queens/ 
 
 Difficulty - Hard
+
+Approach:
+
+We use 3 hashmaps safe_diag_down, safe_diag_up, safe_left to store and check valid positions while doing backtrack.
+
+safe_diag_down - This is for checking if there is any Queen present in current diagonal ( top-down )
+
+safe_diag_up - This is for checking if there is any Queen present in current diagonal ( down-top )
+
+safe_left = This is for checking if the we have placed any Queen to the left of it or not
+
+We're not using safe_right because we're going to column wise to the right and obviously they're not filled.
+
+Time complexity is O(n!).
+Space complexity is O(n), since the maximum recursion depth is n, also the length for all three hashmaps.
 '''
 class Solution(object):
 
