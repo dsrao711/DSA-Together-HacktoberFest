@@ -1,0 +1,25 @@
+'''
+Link -  https://leetcode.com/problems/group-anagrams/
+
+Difficulty - Medium
+'''
+
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        ans = eat,tea
+        res
+        """
+        res = {}
+        
+        for i in strs:
+            # Sorting every word to easily identify
+            # storing every word in a list in hashmap
+            if ''.join(sorted(i)) not in res:
+                res[''.join(sorted(i))] = [i]
+            else:
+                res[''.join(sorted(i))].append(i)
+        # just return the list of list of values
+        return res.values()
