@@ -6,15 +6,8 @@ def search(arr, N, X):
             return i
     return -1
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
 
 import math
-
-
-
     
 def main():
         T=int(input())
@@ -33,4 +26,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# } Driver Code Ends

@@ -7,9 +7,6 @@ class Solution:
         # Code here
         return 1 + n//2
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 
 
 if __name__ == '__main__':
@@ -19,4 +16,3 @@ if __name__ == '__main__':
         ob = Solution();
         ans = ob.nthStair(n)
         print(ans)
-# } Driver Code Ends

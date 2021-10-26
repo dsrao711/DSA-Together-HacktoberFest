@@ -1,4 +1,3 @@
-python
 
 def time_convert(time):
     time_elements = time[:-2].split(":") 

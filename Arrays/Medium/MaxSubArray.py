@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/maximum-subarray/
 
-# Using Kadanes Algorithm
+# Using Kadanes Algorithm - Approach 1 
 
 class Solution(object):
     def maxSubArray(self, nums):
@@ -8,6 +8,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        
         maxCurrent = maxGlobal = nums[0]
         if (len(nums) == 1):
           maxGlobal = nums[0]

@@ -6,11 +6,6 @@ def rotate( arr, n):
     arr[0] = x
     return arr
 
-
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
 def main():
 
     T = int(input())

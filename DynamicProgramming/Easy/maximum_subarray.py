@@ -26,7 +26,7 @@ class Solution(object):
 
 # With O(1) space , optimized solution
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
+    def maxSubArray(self, nums):
 
         """
             The idea of this approach is to traverse the array linearly and update the array such that arr[i] holds the
