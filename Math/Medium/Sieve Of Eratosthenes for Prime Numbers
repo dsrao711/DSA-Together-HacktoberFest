@@ -1,0 +1,19 @@
+def primesieve(n):
+    prime=[0 for i in range(n)]
+    '''p=2
+    while(p*p<=n):
+        if(prime[p]==0):
+            for i in range(p*p,n,p):
+                prime[i]=1
+        p+=1
+    return prime'''
+    for i in range(2,n):
+        if prime[i]==0:
+            for j in range(2*i,n,i):
+                prime[j]=1
+    return prime
+            
+
+
+n=int(input())
+print(primesieve(n))
