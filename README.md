@@ -15,7 +15,7 @@
 </h1>
 
 <p align = "center"> 
-Data structures and Algorithms is one of the most challenging stuffs to handle but Jeetu Bhaiyya once said , 
+Data structures and Algorithms is one of the most challenging stuffs to prepare for Placements  but Jeetu Bhaiyya once said , 
 <br>
 <br>
 <img width="400" src="dsa-tough.jpeg" alt="Algorithms" align = "center">
@@ -29,11 +29,11 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 ## 🍁 What is this repository about ??
 
-- DSA-Together is a collection of python solutions for problems from DSA-450 Sheet by Love Babbar , Leetcode Sheet by Fraz , important algorithms and  concepts necessary for becoming an excellent programmer . 
+- DSA-Together is a repository focusing on python solutions for problems from DSA-450 Sheet by Love Babbar , Leetcode Sheet by Fraz , SDE sheets , important algorithms and  concepts necessary for becoming an excellent programmer and thus becoming 'Interview ready'
 
 - The main motive here is to learn together by solving problems , learning from other's approaches,  providing a better solution 
 
-- Problems from any platform like Hackerank , Leetcode , Hacker earth , etc are most welcome
+- Problems should be from Leetcode/Geeks for Geeks only. (Prefer solving problems from the resources sheet given below or any other SDE sheet)
 
 - For Contributing and setup , read <a href = "/CONTRIBUTING.md"> here</a>
 
@@ -68,6 +68,15 @@ Data structures and Algorithms is one of the most challenging stuffs to handle b
 
 <br>
 
+
+## 🍁Note
+
+#### This repo focuses on genuine questions for Interview prep
+
+- Please do not spam by copy-pasting code from other websites or just a bunch of code with no comments and explanation.
+- Please don't create random PR's with basic problems like 'Factorial' , 'Fibonacci' etc . or Just any random question in cpp or Java
+- If you are interested for working on any particular problem , please create an issue for it , get yourself assigned one and then create a PR 
+- Please write code which follows the coding guidelines provided in the 'CONTRIBUTING.md'
 
 
 <div style = "display : flex ; justify-content : center ; align-items : center">
