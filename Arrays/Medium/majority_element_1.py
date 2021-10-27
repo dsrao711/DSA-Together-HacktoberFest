@@ -16,6 +16,28 @@ Find the count of each element and update the 'max_so_far' accordingly
 """
 # Code here
 
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        max_so_far = 0
+        majority_element = -1
+
+        for i in range(0, len(nums)):
+            current_element_count = 0
+
+            for j in range(0, len(nums)):
+                if nums[j] == nums[i]:
+                    current_element_count += 1
+
+            if max_so_far < current_element_count:
+                max_so_far = current_element_count
+                majority_element = nums[i]
+
+        return majority_element
+
 
 """
 T.C : O(nlog(n))
@@ -30,6 +52,31 @@ Return max_so_far
 """
 # Code here
 
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        max_so_far = -1
+        majority_element = -1
+        current_index = 0
+
+        while current_index < len(nums):
+            tmp_index = current_index
+            current_element_count = 0
+            # keep traversing all elements equal to current element and increment the count
+            while tmp_index < len(nums) and nums[tmp_index] == nums[current_index]:
+                current_element_count += 1
+                tmp_index += 1
+
+            if max_so_far < current_element_count:
+                max_so_far = current_element_count
+                majority_element = nums[current_index]
+            current_index = tmp_index
+
+        return majority_element
 
 """
 T.C : O(n)
