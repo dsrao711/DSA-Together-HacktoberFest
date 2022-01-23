@@ -15,7 +15,8 @@ class Solution(object):
          nums[i],nums[m] = nums[m],nums[i]
          nums[i+1:] = nums[i+1:][::-1]
       return nums
-   def findMaxIndex(self,index,a,curr):
+  
+    def findMaxIndex(self,index,a,curr):
       ans = -1
       for i in range(index,len(a)):
          if a[i]>curr:
