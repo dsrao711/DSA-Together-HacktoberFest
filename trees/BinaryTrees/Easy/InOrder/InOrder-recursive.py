@@ -42,6 +42,7 @@ self.info (the value of the node)
 """
 def inOrder(root):
     #Write your code here
+    # Left - Root - Right
     if root :
       inOrder(root.left)
       print(str(root.info) + " " , end = "")
