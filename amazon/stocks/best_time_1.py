@@ -1,10 +1,10 @@
+# 1 Transaction only 
 class Solution(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
-        
         max_profit = 0
         # Buying day 
         min_so_far = prices[0]
