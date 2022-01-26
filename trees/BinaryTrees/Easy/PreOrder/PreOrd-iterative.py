@@ -15,22 +15,27 @@ class Solution:
         stack = deque()
         op = []
         
+        # Root - Left - Right
         if(root == None):
           return
-        
-        stack.append(root)
-        
+        # Append the root
+        stack.append(root)  
         while stack:
-          
+          # Print the root 
           curr = stack.pop()
           op.append(curr.val)
-          
-            
+          # Since first left is printed then right , right node will be stored first 
+          # in the stack and the left one as stack follows LIFO 
+           
+          # Check for right
           if(curr.right):
-            stack.append(curr.right)
-            
+            stack.append(curr.right)  
+          # Check for left 
           if(curr.left):
             stack.append(curr.left)
             
         return op
           
+# TC : O(n)
+# SC : O(n)
+# ref :  https://youtu.be/Bfqd8BsPVuw
