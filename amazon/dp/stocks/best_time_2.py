@@ -1,5 +1,7 @@
 # question : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/submissions/
 # ref : https://youtu.be/HWJ9kIPpzXs
+
+# Infinite transactions 
 class Solution(object):
     def maxProfit(self, prices):
         """
