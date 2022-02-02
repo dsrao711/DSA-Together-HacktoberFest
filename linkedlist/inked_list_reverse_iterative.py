@@ -21,7 +21,6 @@
 #         self.next = next
 
 class Solution:
-    
     def reverseList(self, head):
         curr = head
         prev = None

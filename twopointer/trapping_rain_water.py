@@ -1,9 +1,12 @@
+#https://leetcode.com/problems/trapping-rain-water/submissions/ 
+
 class Solution(object):
     def trap(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
+        
         if not height:
             return 0
         

@@ -5,11 +5,6 @@ class ListNode(object):
         self.next = next
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
-        """
-        :type list1: Optional[ListNode]
-        :type list2: Optional[ListNode]
-        :rtype: Optional[ListNode]
-        """
         
         c1 = list1
         c2 = list2
@@ -34,5 +29,5 @@ class Solution(object):
             prev = prev.next
             
         prev.next = c1 or c2
-        
+
         return dummy.next
