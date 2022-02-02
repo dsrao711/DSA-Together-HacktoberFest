@@ -28,9 +28,6 @@ class Solution:
            
         return op
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
 import atexit
 import io
 import sys
@@ -56,4 +53,3 @@ if __name__ == '__main__':
         for i in range (len (res)):
             print (res[i], end = " ")
         print ()
-# } Driver Code Ends

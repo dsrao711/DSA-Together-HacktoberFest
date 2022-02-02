@@ -26,9 +26,13 @@ class Solution:
         curr = head
         prev = None
         while(curr != None):
+          # next - The node which is moving forward till the end of linkedlist
           next = curr.next
+          # The next pointer of the current node should point to the prev node 
           curr.next = prev
+          # update the prev node 
           prev = curr
+          # update the curr to next 
           curr = next
           
         return prev
