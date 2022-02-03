@@ -12,7 +12,7 @@ class Solution(object):
         
         r = len(grid)
         c = len(grid[0])
-        s = deque()
+        q = deque()
         
         fresh_oranges = 0
         total_oranges = 0 
@@ -27,7 +27,7 @@ class Solution(object):
                 if(grid[i][j] == 2):
                     total_oranges += 1
                     rotten_oranges += 1
-                    s.append([i , j])
+                    q.append([i , j])
                 if(grid[i][j] == 1):
                     total_oranges += 1
                     
@@ -37,10 +37,10 @@ class Solution(object):
         dx = [0 , 0 , 1, -1]
         dy = [1 , -1 , 0 , 0]
         
-        while(len(s) != 0):
+        while(len(q) != 0):
             
-            points = s[0]
-            s.popleft()
+            points = q[0]
+            q.popleft()
             for j in range(0 , 4):
                 
                 x = dx[j] + points[0]
@@ -53,7 +53,7 @@ class Solution(object):
                 if(grid[x][y] == 1):
                     grid[x][y] = 2
                     rotten_oranges += 1
-                    s.append([x, y])
+                    q.append([x, y])
                     flag = 1
                     
             if(flag == 1):        
