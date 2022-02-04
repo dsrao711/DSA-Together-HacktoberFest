@@ -3,6 +3,7 @@
 class Solution(object):
     
     def checkUniqueRow(self , row , board):
+        # check for unique row 
         f = []
         for i in range(0 , 9):
             if(board[row][i] in f):
@@ -12,6 +13,7 @@ class Solution(object):
         return True
     
     def checkUniqueCol(self , col , board ):
+        # Check for unique col
         f = []
         for i in range(0 , 9):
             if(board[i][col] in f):
@@ -21,6 +23,7 @@ class Solution(object):
         return True
     
     def checkUniqueBox(self , row , col , board):
+        # Unique box
         f = []
         for i in range(0 , 3):
             for j in range(0 , 3):
@@ -32,6 +35,7 @@ class Solution(object):
         return True
     
     def checkValid(self , row , col , board):
+        # for box , we need to check the boxes in range till that particular row and col -> row - row % 3 , col - col % 3
         if(self.checkUniqueRow(row , board) and self.checkUniqueCol(col , board) and self.checkUniqueBox(row - row % 3, col - col % 3,board)):
             return True
         return False
@@ -48,7 +52,6 @@ class Solution(object):
                     continue
                 else:
                     return False
-        
         return True
                 
         
