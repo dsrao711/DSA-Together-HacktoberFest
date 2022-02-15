@@ -14,7 +14,6 @@ class Solution:
     def preorderTraversal(self, root):
         stack = deque()
         op = []
-        
         # Root - Left - Right
         if(root == None):
           return
@@ -26,7 +25,7 @@ class Solution:
           op.append(curr.val)
           # Since first left is printed then right , right node will be stored first 
           # in the stack and the left one as stack follows LIFO 
-           
+
           # Check for right
           if(curr.right):
             stack.append(curr.right)  

@@ -1,64 +1,36 @@
-# Python3 Program to print BFS traversal
-# from a given source vertex. BFS(int s)
-# traverses vertices reachable from s.
-from collections import defaultdict
-
-# This class represents a directed graph
-# using adjacency list representation
+from collections import defaultdict , deque
 class Graph:
+    def __init__(self):
+        self.graph = defaultdict(list)
+    def add_edge(self, u , v):
+        self.graph[u].append(v)
+    def print_graph(self):
+        print(self.graph)
+    def bfs(self , s):
+        v = len(self.graph)
+        vis = [False]*v
+        # Append root 
+        q = deque()
+        q.append(s)
+        vis[s] = True
+        
+        while q :
+            node = q.popleft()
+            print(node)
+            for i in self.graph[node]:
+                if(vis[i] == False):
+                    vis[i] = True
+                    q.append(i)
+                
 
-	# Constructor
-	def __init__(self):
-
-		# default dictionary to store graph
-		self.graph = defaultdict(list)
-
-	# function to add an edge to graph
-	def addEdge(self,u,v):
-		self.graph[u].append(v)
-
-	# Function to print a BFS of graph
-	def BFS(self, s):
-
-		# Mark all the vertices as not visited
-		visited = [False] * (max(self.graph) + 1)
-
-		# Create a queue for BFS
-		queue = []
-
-		# Mark the source node as
-		# visited and enqueue it
-		queue.append(s)
-		visited[s] = True
-
-		while queue:
-
-			# Dequeue a vertex from
-			# queue and print it
-			s = queue.pop(0)
-			print (s, end = " ")
-
-			# Get all adjacent vertices of the
-			# dequeued vertex s. If a adjacent
-			# has not been visited, then mark it
-			# visited and enqueue it
-			for i in self.graph[s]:
-				if visited[i] == False:
-					queue.append(i)
-					visited[i] = True
-
-# Driver code
-
-# Create a graph given in
-# the above diagram
-g = Graph()
-g.addEdge(0, 1)
-g.addEdge(0, 2)
-g.addEdge(1, 2)
-g.addEdge(2, 0)
-g.addEdge(2, 3)
-g.addEdge(3, 3)
-
-print ("Following is Breadth First Traversal"
-				" (starting from vertex 2)")
-g.BFS(2)
+if __name__ == '__main__' :
+    graph = Graph()
+    graph.add_edge(0,1)
+    graph.add_edge(0,2)
+    graph.add_edge(1,2)
+    graph.add_edge(2,0)
+    graph.add_edge(2,3)
+    graph.add_edge(3,3)
+    graph.print_graph()
+    graph.bfs(2)
+    
