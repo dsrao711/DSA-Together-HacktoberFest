@@ -9,7 +9,7 @@ The XOR total of an array is defined as the bitwise XOR of all its elements, or 
 For example, the XOR total of the array [2,5,6] is 2 XOR 5 XOR 6 = 1.
 '''
 
-def subsetXORSum(self, nums: List[int]) -> int:
+def subsetXORSum(self, nums):
         
         l = len(nums)
         res = 0
