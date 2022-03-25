@@ -1,6 +1,7 @@
 class Solution:
     
     def isPalindrome(self , s , l , r):
+        
         while(l < r):
             if(s[l] != s[r]):
                 return False
@@ -8,7 +9,7 @@ class Solution:
             r -= 1
         return True
     
-    def partition(self, s: str) -> List[List[str]]:
+    def partition(self, s):
         
         res = []
         part = []
