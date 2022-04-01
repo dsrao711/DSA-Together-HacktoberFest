@@ -1,6 +1,5 @@
 #https://leetcode.com/problems/number-of-provinces/
  
-
 from collections import defaultdict
 
 class Solution(object):

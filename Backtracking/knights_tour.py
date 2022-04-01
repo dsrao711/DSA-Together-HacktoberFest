@@ -59,7 +59,8 @@ def solveKTUtil(n, board, curr_x, curr_y, move_x, move_y, pos):
 		A recursive utility function to solve Knight Tour
 		problem
 	'''
-
+    
+    # n2 moves possible - Knights tour completed
 	if(pos == n**2):
 		return True
 
@@ -83,4 +84,4 @@ if __name__ == "__main__":
 	# Function Call
 	solveKT(n)
 
-# This code is contributed by AAKASH PAL
+
