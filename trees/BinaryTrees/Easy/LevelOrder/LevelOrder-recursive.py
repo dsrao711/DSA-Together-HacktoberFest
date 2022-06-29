@@ -10,7 +10,7 @@
 # Recursive approach 
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def levelOrder(self, root) :
       result = []
       self.TreeTraversal(root,0,result)
       return result
