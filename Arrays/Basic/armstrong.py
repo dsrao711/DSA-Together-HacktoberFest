@@ -10,7 +10,7 @@ class Solution:
         else:
             return "No"
             
-            
+          
             
 #{ 
 #  Driver Code Starts

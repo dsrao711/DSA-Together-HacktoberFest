@@ -1,4 +1,7 @@
 
+# Link : https://practice.geeksforgeeks.org/problems/longest-common-substring1452/1/?page=5&curated[]=1&sortBy=submissions#
+# Video : https://youtu.be/HrybPYpOvz0
+
 class Solution:
     def longestCommonSubstr(self, X, Y, m, n):
         dp = [[0 for k in range(n+1)] for l in range(m+1)]
@@ -17,10 +20,6 @@ class Solution:
                     dp[i][j] = 0
         return lcss
 
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
 if __name__=='__main__':
     t=int(input())
     for _ in range(t):
@@ -32,4 +31,3 @@ if __name__=='__main__':
         
         ob=Solution()
         print(ob.longestCommonSubstr(S1, S2, n, m))
-# } Driver Code Ends
