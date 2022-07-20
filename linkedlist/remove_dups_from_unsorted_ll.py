@@ -8,6 +8,7 @@
                 self.next = None
     
 '''
+
 class Solution:
     #Function to remove duplicates from unsorted linked list.
     def removeDuplicates(self, head):

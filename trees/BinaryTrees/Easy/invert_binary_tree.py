@@ -10,7 +10,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
+# recursive
 class Solution(object):
     def invertTree(self, root):
         
@@ -33,3 +33,47 @@ class Solution(object):
         self.invertTree(root.right)
         
         return root
+      
+# BFS 
+
+class Solution(object):
+    def invertTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        
+        q = []
+        q.append(root)
+        
+        while(q):
+            node = q.pop(0)
+            if(node):
+                node.right , node.left = node.left , node.right
+                q.append(node.left)
+                q.append(node.right)
+                
+        return root
+      
+# DFS 
+
+class Solution(object):
+    def invertTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        
+        s = []
+        s.append(root)
+        
+        while(s):
+            node = s.pop()
+            if(node):
+                node.right , node.left = node.left , node.right
+                s.append(node.left)
+                s.append(node.right)
+                
+        return root
+
+                
