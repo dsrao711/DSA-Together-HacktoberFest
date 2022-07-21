@@ -5,8 +5,9 @@
 #         self.data = val
 #         self.left = None
 #         self.right = None
-
 # return the Kth largest element in the given BST rooted at 'root'
+
+
 class Solution():
     
     def BTtoArray(self, root , array):
@@ -28,10 +29,7 @@ class Solution():
         arr.sort(reverse = True)
         return arr[k-1]
     
-       
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
+
 
 from collections import deque
 # Tree Node
@@ -105,4 +103,3 @@ if __name__=="__main__":
         root=buildTree(s)
         k = int(input())
         print (Solution().kthLargest(root, k))
-# } Driver Code Ends
