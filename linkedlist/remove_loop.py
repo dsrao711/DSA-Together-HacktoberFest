@@ -4,6 +4,9 @@
 #         self.val = x
 #         self.next = None
 
+
+# remove loop , return starting point of loop
+
 class Solution(object):
     def checkCycle(self , head ):
         slow = head
