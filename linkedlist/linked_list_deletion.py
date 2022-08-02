@@ -9,7 +9,6 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
-
     # Add new element at the end of the list
     def push_back(self, newElement):
         newNode = Node(newElement)

@@ -19,13 +19,17 @@ def moveToFront(head):
     
     if (head == None or head.next == None):
         return head
-    
+
+    # Store last and second last node in curr and sec_last respectively 
     while(curr and curr.next):
         sec_last = curr
         curr = curr.next
-        
+    
+    # Make secondlast point to null
     sec_last.next = None
+    # Last pointing to first node
     curr.next = head
+    # New head is curr 
     head = curr
     
     return curr
